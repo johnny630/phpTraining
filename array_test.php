@@ -14,6 +14,12 @@ print_r ($latlonPolygon);
 //php array remove repeated values
 echo "\nphp array remove repeated values\n";
 $unique_array = array("/test1/test1", "/test2/test2", "test1/test1", "/test1/test1" , "/test3/test3");
+$array_2 = array(1,2,3,4);
+echo 'array index:' . $unique_array[0] . PHP_EOL;
+echo 'array last index:' . end($array_2) . PHP_EOL;
+if(end($array_2)==4){
+    echo 'array last index:' . end($array_2) . PHP_EOL;
+}
 print_r( array_unique($unique_array) );
 print_r( $unique_array );
 
