@@ -1,4 +1,11 @@
 <?php
+//test array_push
+echo 'test array_push';
+$test_arr = [1, 2, 3];
+array_push ($test_arr , 3 ,4);
+print_r ($test_arr);
+
+
 //string split multi array
 echo 'string split multi array'.PHP_EOL;
 $test_arr = '25.041171,121.565228_25.041171,121.565228';
