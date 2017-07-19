@@ -1,4 +1,13 @@
 <?php
+//Sort an array by the length of its values
+$test_arr = array("a"=>[1,2,3] , "b"=>[2,3] , "c"=>[2,3] , "d"=>[1,2,3,4] , "e"=>[1]);
+print_r ($test_arr);
+usort($test_arr, function($a, $b) {
+    return count($b) - count($a);
+});
+print_r ($test_arr);
+
+
 //test array_push
 echo 'test array_push';
 $test_arr = [1, 2, 3];

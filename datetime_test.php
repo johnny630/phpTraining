@@ -1,4 +1,15 @@
 <?php
+//取得日期
+echo gettype(date('Y-m-d')) . PHP_EOL;
+echo date('Y-m-d') . PHP_EOL;//取得今日日期
+
+//日期加減
+echo "日期加減". PHP_EOL;
+$date1 = new DateTime("now");
+$date1->modify('-1 month');
+echo $date1->format('Y-m-d') . PHP_EOL;
+
+
 //date time 
 echo "\nDatetime diff\n";
 $datetime1 = strtotime('2009-10-11');
