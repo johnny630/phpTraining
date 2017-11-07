@@ -39,6 +39,9 @@ print_r($d1) ;
 $diff = date_diff($d1 , $d2);
 print_r($diff->m);
 
+//show date 格式
+echo PHP_EOL.'date G:'. date('G') . PHP_EOL;
+
 function countIntervalMonth($monthCount1 , $monthCount2){
     $d1 = DateTime::createFromFormat('Ymd', strval( (floor($monthCount1/100)+1911)*100 + $monthCount1%100).'01' );
     $d2 = DateTime::createFromFormat('Ymd', strval( (floor($monthCount2/100)+1911)*100 + $monthCount2%100).'01' );
@@ -49,4 +52,24 @@ function countIntervalMonth($monthCount1 , $monthCount2){
     return date_diff($d1 , $d2)->m;
 }
 echo (countIntervalMonth(10502 , 10603));
+
+//日期加減
+$today = date('Y-m-d');
+//$updateTime = strtotime('2017-10-13');
+
+$start = strtotime($today);
+$end = strtotime('2017-10-13');
+$timeDiff = $end - $start;
+$diff_day = floor($timeDiff / (60 * 60 * 24));
+//$diff_day = Date::dateDiff($updateTime,$today);
+echo "日期加減:$diff_day".PHP_EOL;
+
+//日期字串比對
+$d1 = "2017-12-24 20:49:59";
+$d2 = "2017-10-25 14:52:31.800";
+if($d1 < $d2){
+ echo "該更新";
+}else{
+ echo "不用更新";
+}
 ?>

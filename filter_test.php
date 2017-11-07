@@ -6,6 +6,7 @@ $arr = array
  "name" => "peter griffin",
  "age" => "41",
  "email" => "peter@example.com",
+ "address" => false,
  );
 
 $filters = array
@@ -26,6 +27,7 @@ $filters = array
    )
   ),
  "email"=> FILTER_VALIDATE_EMAIL,
+ "address"=> FILTER_VALIDATE_BOOLEAN,
  );
 print_r(filter_var_array($arr, $filters));
 if (in_array( false , filter_var_array($arr, $filters) )){
